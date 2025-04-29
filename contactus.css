@@ -1,0 +1,169 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    text-align: center;
+    background-image: url('contactbackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header / Navbar styling */
+.navbar {
+    background-color: #722053; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Align items in the center horizontally */
+    justify-content: center;  /* Center the items vertically */
+    padding: 20px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 8px rgba(255, 0, 247, 0.3);
+    text-align: center;  /* Ensures content inside is also centered */
+}
+
+/* Back button */
+.back-to-hp {
+    background-color: #b87cb9;
+    border: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 3px rgb(255, 0, 247);
+    border-radius: 100px;
+    padding: 10px 20px;
+}
+
+/* Contact title */
+.contact-info h1 {
+    color: rgb(184, 94, 184);
+    font-weight: bold;
+    font-size: 65px;
+    margin: 5px 0;
+    text-shadow: 2px 2px 3px rgb(255, 0, 247);
+    text-align: center;  /* Center text inside the h1 tag */
+    width: 100%;
+}
+
+/* Subtext */
+.no-worries {
+    background: linear-gradient(90deg, #00ffff, #ff00c3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 26px;
+    font-weight: bolder;
+    text-align: center;  /* Center text */
+    margin-top: 0;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* Contact form container */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 40px auto 0;  /* Added margin-top to create space */
+    background: linear-gradient(90deg, #ffc0cb, #e0b3ff);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form label */
+.contact-form label {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Textarea styling */
+
+.contact-form textarea {
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+    padding: 10px;
+    border: 2px solid #b87cb9;
+    border-radius: 8px;
+    width: 65%;
+    height: 59%;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: black;
+    background-color: #b87cb9;
+    box-shadow: 2px 2px 4px rgba(255, 0, 247, 0.3);
+}
+
+/* Contact button */
+.contact-button {
+    cursor: pointer;
+    background-color: #b87cb9;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    box-shadow: 2px 2px 3px rgb(255, 0, 247);
+    margin-top: 15px;
+    width: 115%;
+    border-radius: 100px;
+    padding: 10px 0;
+}
+
+.contact-button:hover {
+    background-color: #722053;
+}
+
+/* Instagram contact section */
+.insta-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, #ffc0cb, #e0b3ff);
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.insta-contact h2 {
+    color: rgb(184, 94, 184);
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 3px rgb(255, 0, 247);
+}
+
+.insta-contact img {
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.insta-link {
+    background-color: #b87cb9;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    box-shadow: 2px 2px 3px rgb(255, 0, 247);
+    margin-top: 15px;
+    width: 115%;
+    border-radius: 100px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.insta-link:hover {
+    background-color: #722053; 
+}

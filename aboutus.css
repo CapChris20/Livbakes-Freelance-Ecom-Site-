@@ -1,0 +1,52 @@
+/* Ensure full height for background */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('aboutuspage.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ensures background covers full screen */
+}
+
+/* Header or title section */
+.history {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #722053; 
+    color: rgb(184, 94, 184);
+    font-weight: bold;
+    font-size: 60px;
+    margin: 0;
+    text-shadow: 2px 2px 3px rgb(255, 0, 247);
+    padding: 20px;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+    .history {
+        font-size: 36px;
+        padding: 15px;
+    }
+}
+
+/* Responsive styles for phones */
+@media (max-width: 480px) {
+    .history {
+        font-size: 28px;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    body {
+        background-size: contain; /* Adjusts image scaling if needed */
+    }
+}
+
