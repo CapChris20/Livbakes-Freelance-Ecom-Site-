@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts Page</title>
-    <link rel="stylesheet" href="contactus.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contactus.css" />
 </head>
 
 <body>
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="nav-left">
-            <section class="contact-info">
-                <h1>Contact Us Here</h1>
-            </section>
-            <p class="no-worries">If you are having issues with payment, product delivery, etc., NO WORRIES!</p>
-        </div>
-        <div class="nav-right">
-            <a href="index copy.html">
-                <button class="back-to-hp">Back to Menu</button>
-            </a>
-        </div>
-    </header>
 
-    <!-- Contact form container -->
-    <div class="contact-form">
-        <label for="email">Enter Email</label>
-        <textarea id="email" class="email-text"></textarea>
 
-        <a href="https://mail.google.com/mail/?view=cm&to=oliviagarza222@gmail.com&su=Help%20Request&body=Hello,%20I%20need%20assistance%20with..." target="_blank">
-            <button class="contact-button">Contact Support</button>
-        </a>
-    </div>
+  <!-- Header -->
+  <header class="navbar">
+    <h1 class="contact-title">Contact Us Here</h1>
+    <p class="contact-sub">
+      If you’re having issues with payment, product delivery, etc., NO WORRIES!
+    </p>
+    <a href="index.html"><button class="back-to-hp">Back to Menu</button></a>
+  </header>
 
-    <!-- Instagram contact section -->
-    <div class="insta-contact">
-        <h2>Follow Us on Instagram</h2>
-        <img src="insta.png" width="100" height="100" alt="Instagram logo">
-        <a href="https://www.instagram.com/livsmacarons/" target="_blank">
-            <button class="insta-link">Go to Our Instagram</button>
-        </a>
-    </div>
-    
+  <!-- Contact Form -->
+  <section class="contact-card">
+    <label for="email">Enter Email</label>
+    <input type="email" id="email" class="email-text" placeholder="your@email.com" />
+    <a
+      href="https://mail.google.com/mail/?view=cm&to=oliviagarza222@gmail.com&su=Help%20Request&body=Hello,%20I%20need%20assistance%20with..."
+      target="_blank"
+    >
+      <button class="contact-button">Contact Support</button>
+    </a>
+  </section>
+
+  <!-- Instagram Section -->
+  <section class="contact-card insta">
+    <h2>Follow Us on Instagram</h2>
+    <img src="insta.png" alt="Instagram" width="100" height="100" />
+    <a href="https://www.instagram.com/livsmacarons/" target="_blank">
+      <button class="contact-button">Go to Our Instagram</button>
+    </a>
+  </section>
 </body>
 </html>

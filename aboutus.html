@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> About Us Page </title>
-    <link rel="stylesheet" href = "aboutus.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <link rel="stylesheet" href="aboutus.css" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
-
-<header>
- <h1 class="history"> History of Liv Bakes</h1>
-</header>
-
 <body>
 
+  <!-- Background Video -->
+  <video autoplay muted loop id="bg-video">
+    <source src="aboutusbg.mp4" type="video/mp4" />
+  </video>
+
+  <header class="nav-header">
+    <a href="index.html"><button class="back-to-hp">Back to Menu</button></a>
+    <h1 class="history">History of Liv Bakes</h1>
+  </header>
+
+  <div class="container">
+    <!-- Card 1 -->
+    <div class="card-container">
+      <div class="about-card">
+        <h2 class="main-header">Meet Olivia</h2>
+        <p class="main-info">Hi! I'm Olivia, the face behind every hand-crafted macaron you'll find here.</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card-container">
+      <div class="about-card">
+        <h2 class="main-header">Humble Beginnings</h2>
+        <p class="main-info">What started as a baking hobby at age 12—making cakes and cupcakes—turned into a mission to master macarons.</p>
+        <img src="baking.png" alt="Baking" class="about-img"/>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-container">
+      <div class="about-card">
+        <h2 class="main-header">My Philosophy</h2>
+        <p class="main-info">Every macaron should feel like a little moment of joy, whether you're celebrating or just treating yourself.</p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card-container">
+      <div class="about-card">
+        <h2 class="main-header">Thank You</h2>
+        <p class="main-info">Thank you for supporting my small business—I hope you enjoy every bite!</p>
+      </div>
+    </div>
+  </div>
 
 </body>
-    <html>
-
-
-  
+</html>

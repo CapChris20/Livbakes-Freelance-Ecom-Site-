@@ -1,134 +1,182 @@
-/* General Styling */
-/* General Styling for Mobile */
-body {
-  background-image: url(macaronshome.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-}
+/* ==============================
+   EXTENDED ELITE VAPORWAVE CSS
+   ============================== */
 
-.wrap {
-  overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-/* Top navigation bar for Mobile */
-.topnav {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  padding: 15px;
-  height: auto; 
-
-  border-bottom: 4px solid #722053; 
-  background-color: #722053; 
-}
-
-.topnav a {
-  font-weight: bold;
-  background: linear-gradient(90deg, #00ffff, #ff00c3);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: none;
-  font-size: 16px; /* Slightly smaller font */
-  padding: 10px 20px; /* Add horizontal padding */
-  display: block; /* Make each link take full width */
-  text-align: center;
-  margin-bottom: 5px; /* Add some spacing between links */
-  width: 100%; /* Make links full width */
-  box-sizing: border-box; /* Include padding in width calculation */
-}
-
-.topnav a:hover {
-    box-shadow: 2px 2px 3px rgb(251, 99, 246), 0 0 25px rgb(251, 99, 246); /* Neon glow effect */
-    transform: scale(1.05); /* Slightly enlarges the card */
-    border: 2px solid rgb(251, 99, 246); /* Neon border */
-    border-radius: 94px;
-}
-
-/* Logo Styling for Mobile */
-.logo {
-  width: auto;
-  max-height: 80px; /* Slightly smaller logo */
-  object-fit: contain;
-  margin-bottom: 10px; /* Add some space below the logo */
-}
-
-/* Center Heading & Text for Mobile */
-.m-and-m {
-  color: #3ea2a4;
-  font-size: 30px; /* Smaller font size */
-  text-align: center;
-  font-weight: bolder;
-  margin-top: 15px;
-  text-shadow: 1px 1px 2px #ff00c3; /* Less intense shadow */
-}
-
-/* Macarons Description for Mobile */
-.macarons {
-  display: block;
-  text-align: center; /* Center the text */
-  color: hsla(189, 100%, 55%, 0.8);
-  font-weight: bold;
-  max-width: 95%; /* Take up most of the screen width */
-  font-size: 16px; /* Slightly smaller font */
-  margin: 15px auto; /* Center horizontally with margin */
-  padding: 10px;
-  background: linear-gradient(90deg, #00ffff, #ff00c3);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  white-space: pre-line; /* Preserve line breaks */
-}
-
-/* Livbakes Name for Mobile */
-.livbakes-name {
-  color: rgb(184, 94, 184);
-  font-size: 100px; /* Significantly smaller font */
-  text-align: center;
-  text-shadow: 5px 4px 4px #ff00c3; /* Less intense shadow */
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Media Query for larger mobile screens (optional) */
-@media (min-width: 600px) {
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url('homebg.png');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    animation: bgPulse 12s ease-in-out infinite alternate;
+    overflow-x: hidden;
+  }
+  
+  /* ========== NAVBAR ========== */
   .topnav {
-    flex-direction: row;
-    justify-content: space-between;
-    height: 115px;
-    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(114, 32, 83, 0.9);
+    border-bottom: 4px solid #ff00c3;
+    padding: 15px;
+    animation: slideDown 1s ease-in-out;
   }
+  
   .topnav a {
-    display: inline-block;
-    width: auto;
-    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 16px;
+    background: linear-gradient(90deg, #00ffff, #ff00c3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 10px 0;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInLink 1s ease-in-out forwards;
   }
-  .macarons {
-    text-align: right;
-    max-width: 600px;
-    margin-left: auto;
+  
+  .topnav a:hover {
+    transform: scale(1.06);
+    border: 4px solid rgb(251, 99, 246);
+    border-radius: 94px;
+    box-shadow:
+      0 0 12px rgb(251, 99, 246),
+      0 0 25px rgb(255, 0, 255),
+      inset 0 0 6px rgba(255, 255, 255, 0.15);
+    padding: 10px 25px;
+    transition: all 0.3s ease;
   }
-  .m-and-m {
-    font-size: 40px;
+  
+  /* ========== LOGO ========== */
+  .logo {
+    max-height: 80px;
+    animation: floatLogo 4s ease-in-out infinite;
   }
+  
+  /* ========== MAIN HEADERS ========== */
   .livbakes-name {
-    font-size: 175px;
+    font-size: 200px;
+    text-align: center;
+    color: rgb(184, 94, 184);
+    text-shadow:
+      2px 2px 5px #ff00c3,
+      0 0 20px rgba(255, 0, 255, 0.4);
+    margin-top: 40px;
+    animation: neonPop 2s ease-out forwards;
   }
-}
-
-footer{
-  font-weight: bold;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-   
-}
+  
+  .m-and-m {
+    color: #3ea2a4;
+    font-size: 32px;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 2px 3px 6px #ff00c3;
+    animation: shimmer 5s infinite linear;
+  }
+  
+  .macarons {
+    color: #ff77e9;
+    font-weight: 900;
+    font-size: 18px;
+    max-width: 90%;
+    text-align: center;
+    margin: 20px auto;
+    white-space: pre-line;
+    animation: floatText 6s ease-in-out infinite alternate;
+  }
+  
+  /* ========== FOOTER ========== */
+  footer {
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(114, 32, 83, 0.85);
+    color: white;
+    box-shadow: 0 -2px 12px #ff00c3;
+    animation: footerFade 4s ease-in-out infinite alternate;
+  }
+  
+  /* ========== ANIMATIONS ========== */
+  @keyframes slideDown {
+    from { transform: translateY(-60px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes fadeInLink {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes neonPop {
+    0%   { transform: scale(0.6); opacity: 0; filter: blur(6px); }
+    80%  { filter: blur(0); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -100%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+  
+  @keyframes floatLogo {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+  }
+  
+  @keyframes floatText {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+  }
+  
+  @keyframes bgPulse {
+    0%   { filter: brightness(0.9) saturate(1); }
+    100% { filter: brightness(1.05) saturate(1.4); }
+  }
+  
+  @keyframes footerFade {
+    0%   { box-shadow: 0 -2px 6px #ff00c3; }
+    100% { box-shadow: 0 -2px 12px #00ffff; }
+  }
+  
+  /* ========== RESPONSIVE ========== */
+  @media (min-width: 600px) {
+    .topnav {
+      flex-direction: row;
+      justify-content: space-around;
+      height: 115px;
+    }
+    .topnav a {
+      margin: 0 12px;
+    }
+    .livbakes-name {
+      font-size: 200px;
+    }
+    .m-and-m {
+      font-size: 42px;
+    }
+  }
+  
+  @media (max-width: 599px) {
+    .livbakes-name {
+      font-size: 125px;
+      padding: 0 10px;
+    }
+    .m-and-m {
+      font-size: 50px;
+    }
+  }

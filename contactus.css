@@ -1,169 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    text-align: center;
-    background-image: url('contactbackground.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  font-family: 'Arial', sans-serif;
+  background-image: url('contactbg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  animation: fadeSlideUp 1s ease-in-out;
 }
 
-/* Header / Navbar styling */
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+/* Animations */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes neonGlowPulse {
+  0%, 100% {
+    text-shadow: 0 0 8px #ff00f7, 0 0 12px #ff00f7;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff00f7, 0 0 30px #ff00f7;
+  }
+}
+
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Header */
 .navbar {
-    background-color: #722053; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;  /* Align items in the center horizontally */
-    justify-content: center;  /* Center the items vertically */
-    padding: 20px;
-    backdrop-filter: blur(6px);
-    box-shadow: 0 4px 8px rgba(255, 0, 247, 0.3);
-    text-align: center;  /* Ensures content inside is also centered */
+  background-color: #722053;
+  padding: 30px 20px 20px;
+  box-shadow: 0 4px 8px rgba(255, 0, 247, 0.3);
+  backdrop-filter: blur(8px);
+  animation: fadeSlideUp 1s ease-in-out 0.3s backwards;
 }
 
-/* Back button */
+.contact-title {
+  font-size: 50px;
+  font-weight: 900;
+  color: #ff77e9;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  animation: neonGlowPulse 3s infinite;
+}
+
+.contact-sub {
+  background: linear-gradient(90deg, #00ffff, #ff00c3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  animation: fadeSlideUp 1.2s ease-in-out backwards;
+}
+
+/* Button */
 .back-to-hp {
-    background-color: #b87cb9;
-    border: none;
-    color: black;
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
-    cursor: pointer;
-    margin-bottom: 15px;
-    box-shadow: 2px 2px 3px rgb(255, 0, 247);
-    border-radius: 100px;
-    padding: 10px 20px;
+  background-color: #b87cb9;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  font-weight: bolder;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 25px;
+  margin-top: 15px;
+  box-shadow: 2px 2px 3px rgb(255, 0, 247);
+  cursor: pointer;
+  animation: fadeSlideUp 1.3s ease-in-out backwards;
+  transition: all 0.3s ease;
 }
 
-/* Contact title */
-.contact-info h1 {
-    color: rgb(184, 94, 184);
-    font-weight: bold;
-    font-size: 65px;
-    margin: 5px 0;
-    text-shadow: 2px 2px 3px rgb(255, 0, 247);
-    text-align: center;  /* Center text inside the h1 tag */
-    width: 100%;
+.back-to-hp:hover {
+  background-color: #ff77e9;
+  transform: scale(1.05);
 }
 
-/* Subtext */
-.no-worries {
-    background: linear-gradient(90deg, #00ffff, #ff00c3);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 26px;
-    font-weight: bolder;
-    text-align: center;  /* Center text */
-    margin-top: 0;
-    margin-bottom: 10px;
-    width: 100%;
+/* Card Styles */
+.contact-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  border: 2px solid rgba(255, 0, 255, 0.3);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.1);
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: floaty 4s ease-in-out infinite, fadeSlideUp 1s ease-in-out;
 }
 
-/* Contact form container */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 400px;
-    margin: 40px auto 0;  /* Added margin-top to create space */
-    background: linear-gradient(90deg, #ffc0cb, #e0b3ff);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.email {
+  color: #ff77e9;
+  font-weight: 900;
+  animation: neonGlowPulse 2.5s infinite;
 }
 
-/* Form label */
-.contact-form label {
-    font-weight: bold;
-    margin-top: 10px;
-    text-align: left;
-    width: 100%;
+.contact-card label {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  animation: fadeSlideUp 1s ease-in-out;
 }
 
-/* Textarea styling */
-
-.contact-form textarea {
-    font-weight: bolder;
-    font-size: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
-    padding: 10px;
-    border: 2px solid #b87cb9;
-    border-radius: 8px;
-    width: 65%;
-    height: 59%;
-    box-sizing: border-box;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    color: black;
-    background-color: #b87cb9;
-    box-shadow: 2px 2px 4px rgba(255, 0, 247, 0.3);
+.email-text {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 12px;
+  width: 100%;
+  height: auto;
+  border: 2px solid #b87cb9;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  color: black;
+  animation: fadeSlideUp 1.1s ease-in-out;
 }
 
-/* Contact button */
+/* CTA Button */
 .contact-button {
-    cursor: pointer;
-    background-color: #b87cb9;
-    border: none;
-    color: black;
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
-    box-shadow: 2px 2px 3px rgb(255, 0, 247);
-    margin-top: 15px;
-    width: 115%;
-    border-radius: 100px;
-    padding: 10px 0;
+  background-color: #ae53af;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeSlideUp 1.2s ease-in-out;
 }
 
 .contact-button:hover {
-    background-color: #722053;
+  background-color: #722053;
+  color: white;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+  transform: scale(1.05);
 }
 
-/* Instagram contact section */
-.insta-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(90deg, #ffc0cb, #e0b3ff);
-    padding: 20px;
-    margin-top: 20px;
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+/* Insta Section */
+.insta h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #ff77e9;
+  font-weight: 900;
+  /* glow and animation removed */
 }
 
-.insta-contact h2 {
-    color: rgb(184, 94, 184);
-    font-weight: bold;
-    font-size: 24px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 3px rgb(255, 0, 247);
-}
-
-.insta-contact img {
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.insta-link {
-    background-color: #b87cb9;
-    border: none;
-    color: black;
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
-    box-shadow: 2px 2px 3px rgb(255, 0, 247);
-    margin-top: 15px;
-    width: 115%;
-    border-radius: 100px;
-    padding: 10px 0;
-    cursor: pointer;
-}
-
-.insta-link:hover {
-    background-color: #722053; 
+.insta img {
+  margin-bottom: 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  animation: fadeSlideUp 1.4s ease-in-out;
 }
