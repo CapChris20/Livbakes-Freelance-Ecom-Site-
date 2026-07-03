@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products</title>
+  <link rel="stylesheet" href="products.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="index.html" class="nav-btn">&larr; Back to Menu</a>
+    <h2 class="products-name">Macarons</h2>
+    <button class="snipcart-checkout nav-btn">
+      🛒 Cart (<span class="snipcart-total-items"></span>)
+    </button>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="container">
+    <div class="main">
+      <div class="product-wrapper">
+
+        <!-- Fruity Pebbles -->
+        <div class="product">
+          <img class="product-img" src="fruity.JPG" alt="Fruity Pebbles Macarons" />
+          <h3 class="product-title">Fruity Pebbles Macarons (Box of 6)</h3>
+          <p class="product-price">$14.99</p>
+          <button class="button snipcart-add-item"
+            data-item-id="fruity-macarons"
+            data-item-name="Fruity Pebbles Macarons"
+            data-item-price="14.99"
+            data-item-url="https://livbakes-ecom.netlify.app/product.html"
+            data-item-image="fruity.JPG"
+            data-item-description="Box of 6 Fruity Pebbles Macarons"
+            data-item-custom1-name="Fulfillment Method"
+            data-item-custom1-options="Pickup|Delivery">
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Chocolate -->
+        <div class="product">
+          <img class="product-img" src="chocolate-1.JPG" alt="Chocolate Macarons" />
+          <h3 class="product-title">Chocolate Macarons (Box of 6)</h3>
+          <p class="product-price">$15.99</p>
+          <button class="button snipcart-add-item"
+            data-item-id="chocolate-macarons"
+            data-item-name="Chocolate Macarons"
+            data-item-price="15.99"
+            data-item-url="https://livbakes-ecom.netlify.app/product.html"
+            data-item-image="chocolate-1.JPG"
+            data-item-description="Box of 6 Chocolate Macarons"
+            data-item-custom1-name="Fulfillment Method"
+            data-item-custom1-options="Pickup|Delivery">
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Strawberry -->
+        <div class="product">
+          <img class="product-img" src="strawberry-1.JPG" alt="Strawberry Macarons" />
+          <h3 class="product-title">Strawberry Macarons (Box of 6)</h3>
+          <p class="product-price">$15.99</p>
+          <button class="button snipcart-add-item"
+            data-item-id="strawberry-macarons"
+            data-item-name="Strawberry Macarons"
+            data-item-price="15.99"
+            data-item-url="https://livbakes-ecom.netlify.app/product.html"
+            data-item-image="strawberry-1.JPG"
+            data-item-description="Box of 6 Strawberry Macarons"
+            data-item-custom1-name="Fulfillment Method"
+            data-item-custom1-options="Pickup|Delivery">
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Chocolate Peanut Butter -->
+        <div class="product">
+          <img class="product-img" src="cpb.JPG" alt="Chocolate Peanut Butter Macarons" />
+          <h3 class="product-title">Chocolate Peanut Butter Macarons (Box of 6)</h3>
+          <p class="product-price">$15.99</p>
+          <button class="button snipcart-add-item"
+            data-item-id="cpb-macarons"
+            data-item-name="Chocolate Peanut Butter Macarons"
+            data-item-price="15.99"
+            data-item-url="https://livbakes-ecom.netlify.app/product.html"
+            data-item-image="cpb.JPG"
+            data-item-description="Box of 6 Chocolate Peanut Butter Macarons"
+            data-item-custom1-name="Fulfillment Method"
+            data-item-custom1-options="Pickup|Delivery">
+            Add to Cart
+          </button>
+        </div>
+
+        <!-- Jelly -->
+        <div class="product">
+          <img class="product-img" src="jelly-macarons.JPG" alt="Jelly Macarons" />
+          <h3 class="product-title">Jelly Macarons (Box of 6)</h3>
+          <p class="product-price">$14.99</p>
+          <button class="button snipcart-add-item"
+            data-item-id="jelly-macarons"
+            data-item-name="Jelly Macarons"
+            data-item-price="14.99"
+            data-item-url="https://livbakes-ecom.netlify.app/product.html"
+            data-item-image="jelly-macarons.JPG"
+            data-item-description="Box of 6 Jelly Macarons"
+            data-item-custom1-name="Fulfillment Method"
+            data-item-custom1-options="Pickup|Delivery">
+            Add to Cart
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Snipcart Config -->
+  <div hidden id="snipcart" 
+       data-api-key="ZmVlZDUyYTItNjQ0ZS00MmY1LTk5NzYtOGE3NTJkN2VhMjlmNjM4Nzg4MjIzNDEwOTk4Njky"
+       data-config-modal-style="side">
+  </div>
+  <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+
+</body>
+</html>

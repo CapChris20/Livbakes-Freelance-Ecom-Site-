@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <link rel="stylesheet" href="aboutus.css" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+
+  <header class="nav-header">
+    <a href="index.html"><button class="back-to-hp">Back to Menu</button></a>
+    <h1 class="history">About Us</h1>
+  </header>
+
+  <div class="container">
+    <!-- Card 1 -->
+    <div class="card-container">
+      <div class="about-card">
+        <p class="main-info">Hi! I'm Olivia, the face behind every hand-crafted macaron you'll find here.</p>
+        <img src="olivia.JPG" alt="Meet Olivia" class="about-img"/>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card-container">
+      <div class="about-card">
+        <p class="main-info">What started as a baking hobby at age 12—making cakes and cupcakes—turned into a mission to master macarons.</p>
+        <img src="baking.png" alt="Baking" class="about-img"/>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card-container">
+      <div class="about-card">
+        <p class="main-info">Every macaron should feel like a little moment of joy, whether you're celebrating or just treating yourself.</p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card-container">
+      <div class="about-card">
+        <p class="main-info">Thank you for supporting my small business—I hope you enjoy every bite!</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script>
+  document.querySelectorAll('.about-card').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const rotateX = -(y - centerY) / 12;
+      const rotateY = (x - centerX) / 12;
+
+      card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  });
+</script>
+</html>

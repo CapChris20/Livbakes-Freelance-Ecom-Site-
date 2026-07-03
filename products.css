@@ -1,0 +1,201 @@
+/* Global reset */
+* {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in width */
+  outline: none; /* Remove default outline */
+}
+
+body {
+  cursor: pointer; /* Change cursor to pointer */
+  width: 100%; /* Full width */
+  min-height: 100vh; /* Minimum viewport height */
+  font-family: 'Lato', sans-serif; /* Set default font */
+  background-image: url('productsbackground.JPG'); /* Set background image */
+  background-size: cover; /* Cover entire viewport */
+  background-repeat: no-repeat; /* Prevent repeating */
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex; /* Enable flex layout */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Center items vertically */
+  height: 60px; /* Set height */
+  padding: 0 30px; /* Add padding */
+  background: linear-gradient(to bottom right, #ffffff, #ffe6f0); /* soft white-pink gradient */
+  backdrop-filter: blur(12px);
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Start at top */
+  left: 0; /* Start at left */
+  right: 0; /* Extend to right */
+  z-index: 1000; /* Place above other elements */
+}
+
+/* Products name styling */
+.products-name {
+  font-size: 60px; /* Large font size */
+  font-weight: 900; /* Extra bold text */
+  color: #ff77e9; /* Pink text */
+  text-shadow: 2px 2px 6px rgb(101, 35, 149); /* Purple shadow */
+  margin: 0 auto; /* Center horizontally */
+  text-align: center; /* Center text */
+  flex: 1; /* Allow text to grow */
+}
+
+/* Navigation button styling */
+.nav-btn {
+  background-color: #ae53af; /* Purple background */
+  border-radius: 30px; /* Rounded corners */
+  padding: 10px 18px; /* Add padding */
+  color: white; /* White text */
+  font-weight: bold; /* Bold text */
+  font-size: 14px; /* Font size */
+  border: none; /* Remove border */
+  cursor: pointer; /* Change cursor on hover */
+  text-decoration: none; /* Remove underline */
+  font-family: 'Lato', sans-serif; /* Set font */
+  transition: 0.2s ease; /* Smooth transitions */
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Navigation button hover effect */
+.nav-btn:hover {
+  background-color: #ff77e9; /* Change to pink */
+}
+
+/* Container layout */
+.container {
+  display: flex; /* Enable flex layout */
+  margin-top: 100px; /* Add top margin */
+  justify-content: center; /* Center content */
+  padding: 0 2rem; /* Add side padding */
+}
+
+/* Main content area */
+.main {
+  flex-grow: 1; /* Allow content to grow */
+  width: 100%; /* Full width */
+}
+
+/* Product grid layout */
+.product-wrapper {
+  display: grid; /* Enable grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+  gap: 2rem; /* Space between items */
+  width: 100%; /* Full width */
+  margin-bottom: 60px; /* Add bottom margin */
+}
+
+/* Product card styling */
+.product {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  will-change: transform;
+}
+
+
+/* Product image styling */
+.product-img {
+  width: 100%; /* Full width */
+  height: 180px; /* Fixed height */
+  object-fit: cover; /* Cover container */
+  border-radius: 15px; /* Rounded corners */
+  background-color: #f0f0f0; /* Light gray background */
+}
+
+/* Product title styling */
+.product-title {
+  color: #ff69b4; /* Pink text */
+  font-size: 20px; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center text */
+  margin-top: 15px; /* Add top margin */
+}
+
+/* Product price styling */
+.product-price {
+  color: #ff69b4; /* Pink text */
+  font-weight: 600; /* Bold text */
+  font-size: 18px; /* Font size */
+  text-align: center; /* Center text */
+}
+
+/* Product button styling */
+.button {
+  display: block; /* Block-level element */
+  width: 100%; /* Full width */
+  padding: 12px 20px; /* Add padding */
+  background-color: #ff69b4; /* Pink background */
+  border: none; /* Remove border */
+  color: white; /* White text */
+  font-size: 15px; /* Font size */
+  font-family: 'Courier New', Courier, monospace; /* Monospace font */
+  font-weight: bold; /* Bold text */
+  margin-top: 12px; /* Add top margin */
+  border-radius: 30px; /* Rounded corners */
+  text-align: center; /* Center text */
+  transition: 0.2s ease; /* Smooth transitions */
+}
+
+/* Product button hover effect */
+.button:hover {
+  background-color: #e95ca9; /* Change to lighter pink */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Change to vertical layout */
+    height: auto; /* Auto height */
+    padding: 10px 5%; /* Adjust padding */
+  }
+
+  .products-name {
+    margin: 10px 0; /* Adjust margins */
+  }
+
+  .product-wrapper {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 1rem; /* Adjust gap */
+  }
+}
+
+/* Snipcart styling */
+.snipcart__box--header {
+  background: #ff69b4; /* Pink background */
+  color: white !important; /* White text */
+}
+
+.snipcart-cart__footer,
+.snipcart-cart__header,
+.snipcart__content {
+  font-family: 'Lato', sans-serif; /* Set font */
+  background: white; /* White background */
+}
+
+.snipcart-button-primary {
+  background: #ff69b4; /* Pink background */
+  border-radius: 100px; /* Rounded corners */
+  color: white; /* White text */
+  font-weight: bold; /* Bold text */
+  transition: 0.2s ease; /* Smooth transitions */
+}
+
+.snipcart-button-primary:hover {
+  background: #e95ca9; /* Change to lighter pink */
+}
+
+/* Snipcart custom cart styling */
+.snipcart-cart__content, 
+.snipcart-modal__container {
+  background: #fff6fa !important; /* Light pink background */
+}
