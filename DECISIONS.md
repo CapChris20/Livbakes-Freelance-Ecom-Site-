@@ -56,10 +56,10 @@ Free HTTPS and a CDN, with no build step needed.
 
 ## Tradeoffs
 - **Gained:** $0 hosting.
-- **Cost:** `netlify.toml` sets `publish = "/Users/captainchris20/Desktop/LivBakes"`, an absolute path on a local Mac, so **Git-based deploys from this repo will fail**. It only works with manual drag-and-drop or CLI deploys from that machine.
+- **Cost:** `netlify.toml` sets `publish = "/Users/captainchris20/Desktop/LivBakes"`, an absolute path on a local Mac, so Git-based deploys from this repo failed. It only worked with manual drag-and-drop or CLI deploys from that machine. *(Fixed: `publish = "."`.)*
 
 ## What I'd Change
-Set `publish = "."` so Netlify can build from the repo. Fix filename casing: the HTML refers to `fruity.JPG`, `chocolate-1.JPG`, `cpb.JPG`, `olivia.JPG` and others, but the files in the repo are lowercase `.jpg`. Netlify's servers are case-sensitive, so **those images will 404 in production** (macOS hides the problem locally).
+Set `publish = "."` so Netlify can build from the repo. Fix filename casing: the HTML refers to `fruity.JPG`, `chocolate-1.JPG`, `cpb.JPG`, `olivia.JPG` and others, but the files in the repo are lowercase `.jpg`. Netlify's servers are case-sensitive, so those images would 404 in production (macOS hides the problem locally). *(Fixed: references now use the lowercase filenames.)*
 
 ## Measurement
 - Image weight: the largest assets are `olivia.jpg` (1.09 MB), `contactbg.png` (0.81 MB), `baking.png` (0.56 MB) and `aboutbg.png` (0.52 MB). Converting to WebP at display size would cut total page weight substantially.

@@ -11,7 +11,7 @@ body {
   width: 100%; /* Full width */
   min-height: 100vh; /* Minimum viewport height */
   font-family: 'Lato', sans-serif; /* Set default font */
-  background-image: url('productsbackground.JPG'); /* Set background image */
+  background-image: url('productsbackground.jpg'); /* Set background image */
   background-size: cover; /* Cover entire viewport */
   background-repeat: no-repeat; /* Prevent repeating */
 }

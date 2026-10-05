@@ -7,7 +7,7 @@ redirects = []
   [functions."*"]
 
 [build]
-publish = "/Users/captainchris20/Desktop/LivBakes"
+publish = "."
 publishOrigin = "default"
 
   [build.environment]
